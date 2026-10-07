@@ -78,18 +78,20 @@ If you plan to use **image caching** or `TwicVideo`, you will also need to insta
 
 The installation process for additional **Expo modules** depends on your project's origin, whether [Expo Go](https://reactnative.dev/docs/environment-setup?guide=quickstart&package-manager=yarn) or [React Native CLI](https://reactnative.dev/docs/environment-setup?guide=native&package-manager=yarn).
 
+**Note:** `TwicVideo` still supports the deprecated `expo-av` module for projects that have not migrated to `expo-video` yet. When both are installed, `expo-video` is used.
+
 #### For React Native Expo Go projects
 
 Since `Expo` is already installed, add the required dependencies as follows, depending on your needs:
 
 ```bash
-# Expo AV installation (required for TwicVideo component)
+# Expo Video installation (required for TwicVideo component)
 
 ## Using yarn
-yarn add expo-av
+yarn add expo-video
 
 ## Or using npm
-npm install expo-av
+npm install expo-video
 ```
 
 ```bash
@@ -117,13 +119,13 @@ npx install-expo-modules@latest
 After `Expo` package is installed and configured, add the required dependencies as follows, depending on your needs:
 
 ```bash
-# Expo AV installation (required for TwicVideo component)
+# Expo Video installation (required for TwicVideo component)
 
 ## Using yarn
-yarn add expo-av
+yarn add expo-video
 
 ## Or using npm
-npm install expo-av
+npm install expo-video
 ```
 
 ```bash
