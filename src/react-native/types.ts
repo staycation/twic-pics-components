@@ -107,6 +107,27 @@ export interface SizeObject {
     ratio?: number,
 }
 
+export interface ExpoVideoPlayer {
+    addListener: ( eventName: `statusChange`, listener: () => void ) => {
+        remove: () => void,
+    },
+    loop: boolean,
+    muted: boolean,
+    play: () => void,
+    status: string,
+}
+
+export interface ExpoVideoModule {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    Video?: React.ComponentType< any >,
+    useVideoPlayer?: (
+        source: { uri: string },
+        setup?: ( player: ExpoVideoPlayer ) => void
+    ) => ExpoVideoPlayer,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    VideoView?: React.ComponentType< any >,
+}
+
 export interface UrlData {
     anchor: AnchorObject,
     focus: string,

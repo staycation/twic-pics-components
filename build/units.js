@@ -83,6 +83,7 @@ export default [
         "external": [
             `expo-av`,
             `expo-image`,
+            `expo-video`,
             `react`,
             `react-dom`,
             `react-native`,
